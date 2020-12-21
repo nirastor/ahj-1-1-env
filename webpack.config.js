@@ -52,6 +52,18 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new FaviconsWebpackPlugin('./src/favicon.ico'),
+    new FaviconsWebpackPlugin({
+      logo: './src/favicon.png',
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        windows: false,
+        yandex: false,
+      },
+    }),
   ],
 };
